@@ -7,6 +7,7 @@ feature 'List articles on index page' do
     end
 
     it 'displays first article title' do
+      binding.pry
       expect(page).to have_content 'A breaking news item'
     end
 

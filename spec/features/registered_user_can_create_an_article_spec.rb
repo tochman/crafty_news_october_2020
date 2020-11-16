@@ -1,13 +1,16 @@
 # frozen_string_literal: true
 
-feature 'Visitor can write an article' do
+feature 'Registered User can write an article' do
+  let!(:user) { create(:user, email: 'user@domain.com', password: 'password') }
+
   before do
+    login_as user
     visit root_path
     click_on 'Write an Article'
   end
   context 'by providing all necessary information' do
     before do
-      fill_in 'Title', with: 'Another greate demo from Thomas'
+      fill_in 'Title', with: 'Another great demo from Thomas'
       fill_in 'Content', with: 'Learning Rails just became easier....'
       click_on 'Create Article'
     end

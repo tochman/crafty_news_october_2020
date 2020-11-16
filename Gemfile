@@ -20,6 +20,7 @@ group :development, :test do
   gem 'capybara'
   gem 'pry-rails'
   gem 'coveralls', require: false
+  gem 'launchy'
 end
 
 group :development do

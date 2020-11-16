@@ -8,6 +8,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
+    <%= link_to 'Create Account', new_user_registration_path %>
     <%= yield %>
     <% if flash[:notice]%>
       <%= flash[:notice]%>
